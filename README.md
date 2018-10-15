@@ -1,6 +1,7 @@
 <p align="center"><img src="https://github.com/tserkov/parrot/blob/master/app/src/assets/parrot.svg" width="50%"></p>
 
 [![GoDoc](https://godoc.org/github.com/tserkov/parrot?status.svg)](https://godoc.org/github.com/tserkov/parrot)
+[![Build Status](https://travis-ci.com/tserkov/parrot.svg?branch=master)](https://travis-ci.com/tserkov/parrot)
 
 # Parrot
 :bird: Parrot is a syslog server with a real-time web dashboard.
