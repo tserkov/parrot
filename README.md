@@ -1,5 +1,4 @@
-
-<img src="https://github.com/tserkov/parrot/blob/master/app/src/assets/parrot.svg" width="50%">
+<p align="center"><img src="https://github.com/tserkov/parrot/blob/master/app/src/assets/parrot.svg" width="50%"></p>
 
 # Parrot
 :bird: Parrot is a syslog server with a real-time web dashboard.
@@ -44,3 +43,8 @@ Parrot is written in Golang 1.11 for the backend syslog listener, forward, and w
 - Tests
 - Support for forwarding
 - OSX support (untested; built for linux-amd64 only at the moment)
+
+## License
+Parrot is licensed GNU GPL v3.
+
+Parrot icon by [Freepik](http://www.freepik.com "Freepik") from [flaticon.com](https://www.flaticon.com/ "Flaticon") is licensed by [CC BY 3.0](http://creativecommons.org/licenses/by/3.0/ "Creative Commons BY 3.0")
