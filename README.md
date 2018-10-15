@@ -11,7 +11,7 @@
 :hammer: Support for forwarding received logs to another syslog server is planned in a future version.
 
 ## Installation
-:arrow_double_down: Download the [latest release](https://github.com/mcuadros/go-syslog/releases) and extract the appropriate binary to wherever you'd like (renaming it to `parrot` and placing it in `/usr/local/bin` seems nice for *nix systems).
+:arrow_double_down: Download the [latest release](https://github.com/tserkov/parrot/releases) and extract the appropriate binary to wherever you'd like (renaming it to `parrot` and placing it in `/usr/local/bin` seems nice for *nix systems).
 
 ## Usage
 :computer: Just call the binary (`parrot`?) with the appropriate arguments.
