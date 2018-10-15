@@ -93,7 +93,7 @@ export default {
   },
   methods: {
     formatTimestamp(ts) {
-      const d = new Date(ts);
+      const d = new Date(ts * 1000);
       const lds = d.toLocaleDateString();
 
       // If the log is from today, don't show the date

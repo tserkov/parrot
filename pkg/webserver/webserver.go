@@ -9,12 +9,12 @@ package webserver
 import (
 	"context"
 	"net/http"
-	"path/filepath"
+	// "path/filepath"
 	"time"
 
 	"github.com/tserkov/parrot/pkg/sse"
 
-	"github.com/gobuffalo/packr"
+	"github.com/GeertJohan/go.rice"
 )
 
 type Server struct {
@@ -29,10 +29,10 @@ func New(addr string, sseServer *sse.Server) *Server {
 	r.Handle("/squawk", sseServer)
 
 	// Serves the dashboard app from either the local app directory in dev,
-	// or embedded files via Packr.
-	dir, _ := filepath.Abs("./app/dist")
-	box := packr.NewBox(dir)
-	r.Handle("/", http.FileServer(box))
+	// or embedded files in prod.
+	// dir, _ := filepath.Abs("./app/dist")
+	box := rice.MustFindBox("../../app/dist")
+	r.Handle("/", http.FileServer(box.HTTPBox()))
 
 	return &Server{
 		server: &http.Server{

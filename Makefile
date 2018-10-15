@@ -7,7 +7,7 @@ all: test build
 build: clean pre-build build-linux64 post-build
 
 pre-build:
-	packr
+	rice embed-go -v -i ./pkg/webserver
 post-build:
 	upx --brute $(PARROTBIN)*
 test:
