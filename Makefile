@@ -13,7 +13,6 @@ post-build:
 test:
 	go test -v ./...
 clean:
-	go clean
 	rm -f $(PARROTBIN)*
 run:
 	go build -o $(PARROTBIN) -v $(PARROTCMD)

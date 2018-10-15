@@ -10,3 +10,14 @@ install:
   - go mod tidy
   - curl -Ls https://github.com/upx/upx/releases/download/v3.95/upx-3.95-amd64_linux.tar.xz | tar xJO "upx-3.95-amd64_linux/upx" > upx && chmod a+x upx
   - export PATH=$PATH:$PWD
+
+deploy:
+  provider: releases
+  api_key:
+    secure: SfyhlgoTYve/pFiOpT5zDVz1QKQD5DPg4telZKaQvMz7MxhuVoC2qRWo3wuP6OwHXQxzFxslssL8CqTX/mxSlcMsfN6nivk0OQ3KUn1vLbGw5W5zck5QV55nM1hvYn1DE7KG583UkrW7Q2vp6CSp4O3U9ZXZU6CTcP+VCDIW02urUMVtD5FKa8JDNSnhfUrDP7PB9bLHmS/5jC/uMUoHuS2IN86fXoiF5CgnwTG8Udiw3j0nuMm07p1NcQUze4xv15+3yHO8WeBHA05ysrNUfc+Ej95ybkdKiRHfj1p8A3hszxcWCGpidrRMPeq7ABI+eT/1b7Vp8/03VxfxgcduZYMd48fsc5kj/E34ngLTh2uT2HXOcMkGzQvxtbK47hsBSqN1uNMwBoUwKAlnqgzTBLjTmbA5+gkR4DK3Cuo1fpvgjDLhtI9IjbXKYYytYHXU/qCM35m38igBOZBCaAP0S1gQNvLpvFZJE10nGeQE2rrMqK7GRywnr5mSAhuGjM88qwJFs06eK2umObkIdJGlKJ8s3l4J4jdPWJMJAYGIKHIhjU4TFin3/Vpq/KdTfvoxVnQyxsx6dnAzZUFfx8YWZXXymVD2daRPYuhA/bkfgYwI+k8JWcGH5QhDEJ+wKOWpPpJ2B2bgw3xotCQNwXQpfY+Pd4iC3en3XE0ZCkq1PfY=
+  file_glob: true
+  file: bin/*
+  skip_cleanup: true
+  on:
+    tags: true
+    repo: tserkov/parrot
