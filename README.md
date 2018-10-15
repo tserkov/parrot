@@ -10,6 +10,13 @@
 
 :hammer: Support for forwarding received logs to another syslog server is planned in a future version.
 
+## Screenshots
+<p align="center">
+  <img src="../assets/log_display.png?raw=true" width="33%">
+  <img src="../assets/log_display_dark.png?raw=true" width="33%">
+  <img src="../assets/settings.png?raw=true" width="33%">
+</p>
+
 ## Installation
 :arrow_double_down: Download the [latest release](https://github.com/tserkov/parrot/releases) and extract the appropriate binary to wherever you'd like (renaming it to `parrot` and placing it in `/usr/local/bin` seems nice for *nix systems).
 
