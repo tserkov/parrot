@@ -1,0 +1,12 @@
+language: go
+
+go:
+  - "1.11"
+
+env:
+  - GO111MODULE=on
+
+install:
+  - go mod tidy
+  - curl -Ls https://github.com/upx/upx/releases/download/v3.95/upx-3.95-amd64_linux.tar.xz | tar xJO "upx-3.95-amd64_linux/upx" > upx && chmod a+x upx
+  - export PATH=$PATH:$PWD
