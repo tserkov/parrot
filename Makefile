@@ -4,7 +4,7 @@ BUILDFLAGS=
 RUNFLAGS?=-h
 
 all: test build
-build: clean pre-build build-app build-linux64 post-build
+build: clean bundle-app pre-build build-linux64 post-build
 
 pre-build:
 	rice embed-go -v -i ./pkg/webserver
@@ -20,7 +20,7 @@ run:
 deps:
 	GO111MODULE=on go mod tidy
 
-build-app:
+bundle-app:
 	cd app && yarn build
 
 build-linux64:
