@@ -4,7 +4,7 @@ BUILDFLAGS=
 RUNFLAGS?=-h
 
 all: test build
-build: clean pre-build build-linux64 post-build
+build: clean pre-build build-app build-linux64 post-build
 
 pre-build:
 	rice embed-go -v -i ./pkg/webserver
@@ -19,6 +19,9 @@ run:
 	$(PARROTBIN) $(RUNFLAGS)
 deps:
 	GO111MODULE=on go mod tidy
+
+build-app:
+	cd app && yarn build
 
 build-linux64:
 	CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -ldflags="-s -w" -o $(PARROTBIN)_linux_amd64 -v $(PARROTCMD)

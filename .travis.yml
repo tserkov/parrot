@@ -6,9 +6,13 @@ go:
 env:
   - GO111MODULE=on
 
+cache:
+  yarn: true
+  directories:
+    - app/node_modules
+
 install:
   - go get github.com/GeertJohan/go.rice/rice
-  - go mod tidy
   - curl -Ls https://github.com/upx/upx/releases/download/v3.95/upx-3.95-amd64_linux.tar.xz | tar xJO "upx-3.95-amd64_linux/upx" > upx && chmod a+x upx
   - export PATH=$PATH:$PWD
 

@@ -1,2 +1,2 @@
 bin/
-*-packr.go
+pkg/webserver/rice-box.go
