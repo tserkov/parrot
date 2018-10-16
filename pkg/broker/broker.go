@@ -60,7 +60,7 @@ func Start(c *Config) error {
  _____) )___  ____ ____ ___ | |_
 |  ____/ _  |/ ___) ___) _ \|  _)
 | |   ( ( | | |  | |  | |_| | |__
-|_|    \_||_|_|  |_|   \___/ \___))  v1.0.1`)
+|_|    \_||_|_|  |_|   \___/ \___))  v1.0.2`)
 	}
 	// We haven't yet implemented syslog forwarding
 	// TODO(tserkov)
